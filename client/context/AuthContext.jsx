@@ -3,7 +3,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { io } from "socket.io-client";
 
-const backendUrl ="https://quickchat-app-1-file.onrender.com";
+const backendUrl =import.meta.VITE_BASEURL || "http://localhost:8000";
 axios.defaults.baseURL=backendUrl;
 
 export const AuthContext = createContext();
